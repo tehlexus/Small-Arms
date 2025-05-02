@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 500f;
     private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +19,6 @@ public class movement : MonoBehaviour
 
         Vector3 moveDirection = new Vector3(-zDirection, 0.0f, xDirection).normalized;
 
-        Vector3 newPosition = rb.position + moveDirection * speed * Time.fixedDeltaTime;
-        rb.MovePosition(newPosition);
+        rb.linearVelocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 }
