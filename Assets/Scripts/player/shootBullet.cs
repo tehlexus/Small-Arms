@@ -5,7 +5,7 @@ public class shootBullet : MonoBehaviour
 {
     public GameObject projectile;
     private float launchVelocity = 10f;
-    private int maxBullets = 2;
+    private int maxBullets = 1;
     private int currentBullets = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
